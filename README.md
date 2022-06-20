@@ -15,7 +15,8 @@
 <!-- ABOUT THE PROJECT -->
 <h1>🧐 Why this Project</h1>
 <br />
-Portfolios are a great way to demonstrate the competencies you would list on a resume or talk about in an interview — they allow you to show and not just tell. During a job search, the portfolio showcases your work to potential employers. It presents evidence of your relevant skills and abilities.
+1.The primary goal of an e-commerce site is to sell goods and services online. This project deals with developing an e-commerce website for Brand Sneakers. It provides the user with a catalog of different sneakers available for purchase in the store.
+2.In this e-commerce website project, I added the features that a business can process orders, accept payments, manage shipping and logistics, and provide customer service.
 
 <h2>Landing Page<h2>
   
