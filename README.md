@@ -52,7 +52,7 @@ Portfolios are a great way to demonstrate the competencies you would list on a r
 I made this projects using new tech stacks
 * [HTML](https://html.com/)
 * [CSS](https://css-tricks.com/)
- * [JS](https://www.javascript.com//)
+* [Javascript](https://www.javascript.com//)
 
  <h1>👨‍💻 Features & Tech Things</h1>
   
