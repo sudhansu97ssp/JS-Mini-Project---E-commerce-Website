@@ -15,7 +15,7 @@
 <!-- ABOUT THE PROJECT -->
 <h1>🧐 Why this Project</h1>
 <br />
-1.The primary goal of an e-commerce site is to sell goods and services online. This project deals with developing an e-commerce website for Brand Sneakers. It provides the user with a catalog of different sneakers available for purchase in the store.
+1.The primary goal of an e-commerce site is to sell goods and services online. This project deals with developing an e-commerce website for Brand Sneakers. It provides the user with a catalog of different sneakers available for purchase in the store.<br />
 2.In this e-commerce website project, I added the features that a business can process orders, accept payments, manage shipping and logistics, and provide customer service.
 
 <h2>Landing Page<h2>
