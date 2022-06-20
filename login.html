@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Kart</title>
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGKvsg+p" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+   <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body class="login">
+    <section id="header">
+        <a href="#"><img src="./img/Logo.png" class="logo" alt="image"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="login.html">Sign in</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa fa-shopping-cart" style="font-size: 20px;"></i></a></li>
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size: 20px;"></i></a>
+            <i id="bar" class="fa fa-outdent"></i>
+            
+        </div>
+    </section>
+
+    <section id="login" class="section-p1">
+        <div class="login-container">
+            <form action="product.html" class="form form--hidden" id="login-form">
+                <h2 class="form-title">Login</h2>
+                <div class="form-message form-message-error"></div>
+                <div class="form-input-group">
+                    <input type="text" class="form-input" autofocus placeholder="Username or Email">
+                    <div class="form-input-error-message"></div>
+                </div>
+
+                <div class="form-input-group">
+                    <input type="password" class="form-input" autofocus placeholder="Password">
+                    <div class="form-input-error-message"></div>
+
+                    <button class="normal" type="submit">Continue</button>
+                    <p class="form-text">
+                        <a href="#" class="form-link">Forget Your Password?</a>
+                    </p>
+
+                    <p class="form-text">
+                        <a class="form-link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+                    </p>
+                </div>
+            </form>
+            <form class="form" id="createAccount">
+                <h2 class="form-title">Create Account</h2>
+                <div class="form-message form-message-error"></div>
+                <div class="form-input-group">
+                    <input type="text" id="signupUsername" class="form-input" autofocus placeholder="Username">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                    <input type="text" class="form-input" autofocus placeholder="Email Address">
+                    <div class="form-input-error-message"></div>
+                </div>
+
+                <div class="form-input-group">
+                    <input type="password" class="form-input" autofocus placeholder="Password">
+                    <div class="form-input-error-message"></div>
+                </div>
+                <div class="form-input-group">
+                        <input type="password" class="form-input" autofocus placeholder="Confirm Password">
+                        <div class="form-input-error-message"></div>
+                </div>
+                    <button class="normal" type="submit">Continue</button>
+
+                    <p class="form-text">
+                        <a class="form-link" href="./" id="linkLogin">Already Have an account? Sign in</a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="./img/Logo.png" alt="image">
+            <h4>Contact</h4>
+            <p><strong> Address :</strong> Electronic city Phase-II, Bengaluru, Karnataka</p>
+            <p><strong>Phone :</strong>+91-7008538962 /+91-7377445375</p>
+            <p><strong>Hours :</strong>10.00 - 18.00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook f"></i>
+                    <i class="fa fa-twitter f"></i>
+                    <i class="fa fa-instagram f"></i>
+                    <i class="fa fa-youtube f"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col-install">
+            <h4>Install App</h4>
+            <p>From App Store or Play Store</p>
+            <div class="row">
+                <img src="./img/App store.jpg" alt="img">
+                <img src="./img/google play.jpg" alt="img">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <i class="fa fa-cc-visa" style="font-size: 20px;"></i>
+            <i class="fa fa-cc-mastercard" style="font-size: 20px;"></i>
+            <i class="fa fa-cc-discover" style="font-size: 20px;"></i>
+            <i class="fa fa-cc-amex" style="font-size: 20px;"></i>
+        </div>
+        <div class="copyright">
+            <p>© 2022, Sudhansu-HTML CSS JS Ecommerce Template</p>
+        </div>
+    </footer>
+
+    <script defer src="script.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Kart</title>
+   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGKvsg+p" crossorigin="anonymous"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+   <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="./img/Logo.png" class="logo" alt="image"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a  href="product.html">Product</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html">Sign in</a></li>
+                <li id="lg-bag"><a class="active" href="cart.html"><i class="fa fa-shopping-cart" style="font-size: 20px;"></i></a></li>
+                <a href="#" id="close"><i class="fa fa-times"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa fa-shopping-cart" style="font-size: 20px;"></i></a>
+            <i id="bar" class="fa fa-outdent"></i>
+            
+        </div>
+    </section>
+
+    <section id="page-header">
+        <h2>#Stay Home</h2>
+        <p>Save more with Coupons and upto 70% off</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width="100%" style="font-family: 'poppins';">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td >Image</td>
+                    <td class="cart-item cart-header cart-column">Product</td>
+                    <td class="cart-price cart-header cart-column">Price</td>
+                    <td class="cart-quantity cart-header cart-column">Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a class="btn-danger" href="#"></a><i class="fa fa-times-circle"></i></td>
+                    <td><img src="./img/Adidas Multix shoe.jpg" alt=""></td>
+                    <td>Adidas Multix shoe</td>
+                    <td class="shop-item-price">₹6636.00</td>
+                    <td><input class="cart-quantity-input" type="number" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td><a class="btn-danger" href="#"></a><i class="fa fa-times-circle"></i></td>
+                    <td><img src="./img/Puma X-ray Sneakers.jpg" alt=""></td>
+                    <td>Puma X-ray Sneakers</td>
+                    <td>₹4549.00</td>
+                    <td><input class="cart-quantity-input" type="number" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td><a class="btn-danger" href="#"></a><i class="fa fa-times-circle"></i></td>
+                    <td><img src="./img/Puma Men Ferrari.jpg" alt=""></td>
+                    <td>Puma Men Ferrari Sneaker</td>
+                    <td>₹6299.00</td>
+                    <td><input class="cart-quantity-input" type="number" value="1" min="1"></td>
+                </tr>
+                <tr>
+                    <td><a class="btn-danger" href="#"></a><i class="fa fa-times-circle"></i></td>
+                    <td><img src="./img/Air Jordan Flight Club.jpg" alt=""></td>
+                    <td>Nike Air Jordan Flight Club Sneaker</td>
+                    <td>₹12492.00</td>
+                    <td><input class="cart-quantity-input" type="number" value="1" min="1"></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter Your Coupon">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td>₹6636.00</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td><strong class="cart-total-title">Total</strong></td>
+                    <td><strong class="cart-total-price">₹6636.00</strong></td>
+                </tr>
+            </table>
+            <button class="normal">Proceed to checkout</button>
+        </div>
+    </section>
+
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="./img/Logo.png" alt="image">
+            <h4>Contact</h4>
+            <p><strong> Address :</strong>Electronic city Phase-II, Bengaluru, Karnataka.</p>
+            <p><strong>Phone :</strong>+91-7008538962 /+91-7377445375</p>
+            <p><strong>Hours :</strong>10.00 - 18.00, Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <i class="fa fa-facebook f"></i>
+                    <i class="fa fa-twitter f"></i>
+                    <i class="fa fa-instagram f"></i>
+                    <i class="fa fa-youtube f"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About Us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign in</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+
+        <div class="col-install">
+            <h4>Install App</h4>
+            <p>From App Store or Play Store</p>
+            <div class="row">
+                <img src="./img/App store.jpg" alt="img">
+                <img src="./img/google play.jpg" alt="img">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <i class="fa fa-cc-visa" style="font-size: 20px;"></i>
+            <i class="fa fa-cc-mastercard" style="font-size: 20px;"></i>
+            <i class="fa fa-cc-discover" style="font-size: 20px;"></i>
+            <i class="fa fa-cc-amex" style="font-size: 20px;"></i>
+        </div>
+        <div class="copyright">
+            <p>© 2022, Sudhansu-HTML CSS JS Ecommerce Template</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
