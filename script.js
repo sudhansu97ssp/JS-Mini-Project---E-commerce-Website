@@ -95,7 +95,7 @@ function setInputError(inputElement, message){
     inputElement.parentElement.querySelector('.form-input-error-message').textContent = message;
 }
 
-//setForMessage(loginForm,'success',"You're logged in!");
+setForMessage(loginForm,'success',"You're logged in!");
 
 
 
