@@ -77,14 +77,14 @@ if (form) {
 }
 
 /* form swap and error handling */
-// function setForMessage(formElement,type,message){
-//     const messageElement = formElement.querySelector('.form-message');
+ function setForMessage(formElement,type,message){
+     const messageElement = formElement.querySelector('.form-message');
 
-//     messageElement.textContent = message;
-//     messageElement.classList.remove('form-message-success','form-message-error');
-//     messageElement.classList.add(`form-message-${type}`);
-// }
-
+     messageElement.textContent = message;
+     messageElement.classList.remove('form-message-success','form-message-error');
+     messageElement.classList.add(`form-message-${type}`);
+ }
+//
 function clearInputError(inputElement) {
     inputElement.classList.remove("form-input-error");
     inputElement.parentElement.querySelector('.form-input-error-message').textContent = "";
@@ -114,12 +114,13 @@ document.addEventListener("DOMContentLoaded",() => {
         loginForm.classList.remove('form--hidden');
         createAccountForm.classList.add('form--hidden');
     });
-    // loginForm.addEventListener('submit',e =>{
-    //     e.preventDefault();
+    //
+     loginForm.addEventListener('submit',e =>{
+         e.preventDefault();
     
-    //     setForMessage(loginForm,'error','Invalid username/password combination');
-    // });
-
+        setForMessage(loginForm,'error','Invalid username/password combination');
+     });
+//
     document.querySelectorAll('.form-input').forEach(inputElement => {
         inputElement.addEventListener('blur', e =>{
             if(e.target.id === 'signupUsername' && e.target.value.length > 0 && e.target.value.length <10){
