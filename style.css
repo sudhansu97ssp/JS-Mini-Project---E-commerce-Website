@@ -99,6 +99,12 @@ body{
     position: relative;
 }
 
+#navbar li a span{
+    color: black;
+    position: absolute;
+    bottom: 10px;
+}
+
 #navbar li a{
     text-decoration: none;
     font-size: 16px;
@@ -486,6 +492,10 @@ footer .copyright{
     padding: 14px;
 }
 
+.pro{
+    cursor: pointer;
+}
+
 #page-header h2,
 #page-header p{
     color: #000;
@@ -508,10 +518,7 @@ footer .copyright{
     font-size: 16px;
     font-weight: 600;
 }
-
-
 /*Product Page end */
-
 
 /*Single Product Page Start */
 
@@ -680,76 +687,6 @@ footer .copyright{
 
 /*Cart Page Start*/
 
-#cart{
-    overflow-x: auto;
-}
-
-#cart table{
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
-}
-
-#cart table img{
-    width: 70px;
-}
-
-#cart table td:nth-child(1){
-    width: 100%;
-    text-align: center;
-}
-
-#cart table td:nth-child(2){
-    width: 150%;
-    text-align: center;
-}
-
-#cart table td:nth-child(3){
-    width: 250%;
-    text-align: center;
-}
-
-#cart table td:nth-child(4),
-#cart table td:nth-child(5),
-#cart table td:nth-child(6)
-{
-    width: 150%;
-    text-align: center;
-}
-
-#cart table td:nth-child(5) input{
-    width: 70px;
-    padding: 10px 5px 10px 15px;
-}
-
-#cart table thead{
-    border: 1px solid #e2e9e1;
-    border-left: none;
-    border-right: none;
-}
-
-#cart table thead td{
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 13px;
-    padding: 18px 0;
-}
-
-#cart table tbody tr td{
-    padding-top: 15px;
-}
-
-#cart table tbody td{
-    font-size: 13px;
-}
-
-#cart-add{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 #coupon{
     width: 50%;
     margin-bottom: 30px;
@@ -775,25 +712,88 @@ footer .copyright{
     padding: 12px 20px;
 }
 
-#subtotal{
-    width: 50%;
-    margin-bottom: 30px;
-    border: 1px solid #e2e9e1;
-    padding: 30px;
+.products-container{
+    max-width: 650px;
+    justify-content: space-around;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 100px; 
 }
 
-#subtotal table{
-    border-collapse: collapse;
+.products-container i{
+    font-size: 20px;
+    color: slategray;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.product-header{
     width: 100%;
-    margin-top: 20px;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 4px solid lightgrey;
+    margin: 0 auto;
 }
 
-#subtotal table td{
-    width: 50%;
-    border: 1px solid #e2e9e1;
-    padding: 10px;
-    font-size: 13px;
+.product-title{
+    width: 45%;
+    
 }
+
+.price{
+    width: 15%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.total{
+    width: 10%;
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    align-items: center;
+}
+
+.quantity{
+    width: 30%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+}
+.product{
+width: 45%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 10px 0;
+border-bottom: 1px solid lightgray;
+} 
+.products{
+    display: flex;
+    flex-direction: row;
+}
+.basketTotalContainer{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px 0;
+}
+.basketTotalContainer h4{
+    color: #000;
+    font-size: 15px;
+}
+.basketTotalTitle{
+    width: 30%;
+}
+
+.basketTotal{
+    width: 10%;
+}
+
 /*Cart Page End*/
 
 /*login page start*/
@@ -918,9 +918,6 @@ footer .copyright{
 #login h2{
     color: #000;
 }
-
-
-
 /*login page end*/
 
 /* Start Media Query */
@@ -1087,10 +1084,6 @@ footer .copyright{
         width: 100%;
         margin-bottom: 30px;
     }
-    #cart-add{
-        display: flex;
-        flex-direction: column;
-    }
     #coupon{
         width: 100%;
     }
@@ -1099,10 +1092,6 @@ footer .copyright{
         padding: 20px;
     }
 }
-
-
-
-
 /* End Media Query */
 
 
