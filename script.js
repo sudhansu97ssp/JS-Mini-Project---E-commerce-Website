@@ -118,9 +118,4 @@ function loginForm(e) {
   } else {
     alertMessage = "Password invalid";
   }
-
-  if (true) {
-    return true;
-  } else {
-  }
 }

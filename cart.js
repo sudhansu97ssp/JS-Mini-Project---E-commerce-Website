@@ -18,13 +18,13 @@ let products = [
   {
     brand: "Adidas",
     tag: "Adidas Multix shoe",
-    price: 6636,
+    price: 6699,
     inCart: 0,
   },
   {
     brand: "Adidas",
     tag: "Adidas Women's Swift Running",
-    price: 10212,
+    price: 10299,
     inCart: 0,
   },
   {
@@ -36,7 +36,7 @@ let products = [
   {
     brand: "Nike",
     tag: "Air Jordan Flight Club",
-    price: 12492,
+    price: 12499,
     inCart: 0,
   },
   {
@@ -48,7 +48,7 @@ let products = [
   {
     brand: "Nike",
     tag: "Nike Air Jordan 1",
-    price: 3595,
+    price: 3599,
     inCart: 0,
   },
   {
@@ -225,5 +225,6 @@ function displayCart() {
     `;
   }
 }
+
 onLoadCartNumbers();
 displayCart();

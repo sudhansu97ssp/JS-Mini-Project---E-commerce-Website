@@ -762,11 +762,14 @@ td{
     width: 30%;
     border-bottom: 1px solid lightgray;
 }
-
+.cart-Total{
+    margin-left: 100%;
+}
 .basketTotalContainer{
 
     width: 100%;
-    /* padding: 0 1000px; */
+    position: absolute;
+    margin-left: 1000px;
 }
 .basketTotalContainer h4{
     color: #000;
