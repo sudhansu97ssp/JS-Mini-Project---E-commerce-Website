@@ -720,6 +720,18 @@ footer .copyright{
 .products{
     width: 90%;
 }
+.customTable{
+    width: 100%;
+}
+th{
+    padding: 30px 90px 20px 100px;
+    width: 80%;
+}
+
+td{
+    padding: 10px 30px;
+}
+
 
 .products-container i{
     font-size: 20px;
@@ -737,7 +749,7 @@ footer .copyright{
 .price{
     width: 15%;
     border-bottom: 1px solid lightgrey;
-   
+    padding: 0 110px 0;
 }
 
 .total{

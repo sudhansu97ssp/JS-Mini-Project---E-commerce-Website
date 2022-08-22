@@ -203,11 +203,11 @@ function displayCart() {
       productContainer.innerHTML += `
 
     <td><i class="fa-solid fa-circle-xmark"></i></td>
-    <td><img src="./img/${item.tag}.jpg" alt="image" style="width: 80px;"></td>
-    <td>${item.tag}</td>
-    <td class='price'>${item.price}</td>
-    <td>${item.inCart}</td></div>
-    </td>
+    <td><img src="./img/${item.tag}.jpg" alt="image" style="width:30px;">${
+        item.tag
+      }</td>
+    <td class='price'>${item.price}.00</td>
+    <td class='price'>${item.inCart}</td>
     <td class='total'>
     ₹${item.inCart * item.price}.00
     </td>
@@ -221,6 +221,7 @@ function displayCart() {
         <h4 class='basketTotal'>
         ₹${cartCost}.00
         </h4>
+      </div>
     `;
   }
 }

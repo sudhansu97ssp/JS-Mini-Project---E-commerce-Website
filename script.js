@@ -1,105 +1,22 @@
-class Login {
-  constructor(form, fields) {
-    this.form = form;
-    this.fields = fields;
-    this.validateonSubmit();
-  }
+/* Navigation bar Handling */
 
-  validateonSubmit() {
-    let self = this;
+const bar = document.getElementById("bar");
+const close = document.getElementById("close");
+const nav = document.getElementById("navbar");
 
-    this.form.addEventListener("submit", (e) => {
-      e.preventDefault();
-      var error = 0;
-      self.fields.forEach((field) => {
-        const input = document.querySelector(`#${field}`);
-        if (self.validateFields(input) == false) {
-          error++;
-        }
-      });
-      if (error == 0) {
-        //do login api here
-        localStorage.setItem("auth", 1);
-        this.form.submit();
-      }
-    });
-  }
-
-  validateFields(field) {
-    if (field.value.trim() === "") {
-      this.setStatus(
-        field,
-        `${field.previousElementSibling.innerText} cannot be blank`,
-        "error"
-      );
-      return false;
-    } else {
-      if (field.type == "password") {
-        if (field.value.length < 8) {
-          this.setStatus(
-            field,
-            `${field.previousElementSibling.innerText} must be at least 8 characters`,
-            "error"
-          );
-          return false;
-        } else {
-          this.setStatus(field, null, "success");
-          return true;
-        }
-      } else {
-        this.setStatus(field, null, "success");
-        return true;
-      }
-    }
-  }
-
-  setStatus(field, message, status) {
-    const errorMessage = field.parentElement.querySelector(".error-message");
-
-    if (status == "success") {
-      if (errorMessage) {
-        errorMessage.innerText = "";
-      }
-      field.classList.remove("input-error");
-    }
-
-    if (status == "error") {
-      errorMessage.innerText = message;
-      field.classList.add("input-error");
-    }
-  }
+if (bar) {
+  bar.addEventListener("click", () => {
+    nav.classList.add("active");
+  });
 }
 
-const form = document.querySelector(".loginForm");
-if (form) {
-  const fields = ["username", "password"];
-  const validator = new Login(form, fields);
+if (close) {
+  close.addEventListener("click", () => {
+    nav.classList.remove("active");
+  });
 }
 
-/* form swap and error handling */
-// function setForMessage(formElement,type,message){
-//     const messageElement = formElement.querySelector('.form-message');
-
-//     messageElement.textContent = message;
-//     messageElement.classList.remove('form-message-success','form-message-error');
-//     messageElement.classList.add(`form-message-${type}`);
-// }
-
-function clearInputError(inputElement) {
-  inputElement.classList.remove("form-input-error");
-  inputElement.parentElement.querySelector(
-    ".form-input-error-message"
-  ).textContent = "";
-}
-
-function setInputError(inputElement, message) {
-  inputElement.classList.add("form-input-error");
-  inputElement.parentElement.querySelector(
-    ".form-input-error-message"
-  ).textContent = message;
-}
-
-//setForMessage(loginForm,'success',"You're logged in!");
+/* Sign up and Login form handling */
 
 document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.querySelector("#login-form");
@@ -118,43 +35,92 @@ document.addEventListener("DOMContentLoaded", () => {
     loginForm.classList.remove("form--hidden");
     createAccountForm.classList.add("form--hidden");
   });
-  // loginForm.addEventListener('submit',e =>{
-  //     e.preventDefault();
-
-  //     setForMessage(loginForm,'error','Invalid username/password combination');
-  // });
-
-  document.querySelectorAll(".form-input").forEach((inputElement) => {
-    inputElement.addEventListener("blur", (e) => {
-      if (
-        e.target.id === "signupUsername" &&
-        e.target.value.length > 0 &&
-        e.target.value.length < 10
-      ) {
-        setInputError(
-          inputElement,
-          "Username must be at least 10 character in length"
-        );
-      }
-    });
-    inputElement.addEventListener("input", (e) => {
-      clearInputError(inputElement);
-    });
-  });
 });
 
-const bar = document.getElementById("bar");
-const close = document.getElementById("close");
-const nav = document.getElementById("navbar");
+/* Sign up Form user data Handling */
 
-if (bar) {
-  bar.addEventListener("click", () => {
-    nav.classList.add("active");
-  });
+function signUp(e) {
+  event.preventDefault();
+
+  //console.log("running");
+
+  var username = document.getElementById("signupUsername").value;
+  var email = document.getElementById("email").value;
+  var pass = document.getElementById("password").value;
+  var cpass = document.getElementById("cpassword").value;
+
+  var user = {
+    username: username,
+    email: email,
+    password: pass,
+    cpassword: cpass,
+  };
+
+  var json = JSON.stringify(user);
+  localStorage.setItem(username, json);
+  validateSignup();
 }
 
-if (close) {
-  close.addEventListener("click", () => {
-    nav.classList.remove("active");
-  });
+/* Signup validation */
+
+function validateSignup(e) {
+  event.preventDefault;
+
+  var username = document.getElementById("signupUsername").value;
+  var email = document.getElementById("email").value;
+  var pass = document.getElementById("password").value;
+  var cpass = document.getElementById("cpassword").value;
+
+  var user = localStorage.getItem(username);
+  var data = JSON.parse(user);
+  console.log(data);
+
+  var returnVal = true;
+
+  if (data.username.length < 6) {
+    alert("Username length should be atleast 8.");
+  }
+
+  if (data.username.length == 0) {
+    alert("Length of username cannot be zero");
+  }
+
+  // if (data.email.includes("@")) {
+  //   alert("Email is not Correct");
+  // }
+
+  if (data.password.length < 8) {
+    alert("Password length should be more than 8");
+  }
+  if (data.username.length >= 8 && data.password.length >= 8) {
+    alert("User Registration Successful");
+  }
+}
+
+/* Login form handling */
+
+function loginForm(e) {
+  event.preventDefault;
+
+  var username = document.getElementById("username").value;
+  var pass = document.getElementById("pass").value;
+  var alertMessage = document.getElementById("alert");
+
+  var user = localStorage.getItem(username);
+  var data = JSON.parse(user);
+  console.log(data);
+
+  if (user == null) {
+    alertMessage.innerHTML = "Username Invalid";
+  } else if (username == data.username && pass == data.password) {
+    alert("Login Successful");
+  } else if (username == data.username && pass == data.password) {
+  } else {
+    alertMessage = "Password invalid";
+  }
+
+  if (true) {
+    return true;
+  } else {
+  }
 }

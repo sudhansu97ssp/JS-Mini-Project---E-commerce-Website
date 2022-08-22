@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D Kart</title>
-   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGKvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
    <link rel="icon" type="image/x-icon" href="./img/favicon-32x32.png">
@@ -34,19 +34,18 @@
 
     <section id="login" class="section-p1">
         <div class="login-container">
-            <form action="product.html" class="form form--hidden" id="login-form">
+            <p id="alert"></p>
+            <form action="product.html" onsubmit="return loginForm()" class="form form--hidden" id="login-form">
                 <h2 class="form-title">Login</h2>
                 <div class="form-message form-message-error"></div>
                 <div class="form-input-group">
-                    <input type="text" class="form-input" autofocus placeholder="Username or Email">
-                    <div class="form-input-error-message"></div>
+                    <input type="text" class="form-input" id="username" autofocus placeholder="Username or Email" required>
                 </div>
 
                 <div class="form-input-group">
-                    <input type="password" class="form-input" autofocus placeholder="Password">
-                    <div class="form-input-error-message"></div>
+                    <input type="password" class="form-input"id="pass" autofocus placeholder="Password" required>
 
-                    <button class="normal" type="submit">Continue</button>
+                    <button class="normal" type="submit">Login</button>
                     <p class="form-text">
                         <a href="#" class="form-link">Forget Your Password?</a>
                     </p>
@@ -56,25 +55,21 @@
                     </p>
                 </div>
             </form>
-            <form class="form" id="createAccount">
+            <form class="form" onsubmit="signUp()" id="createAccount">
                 <h2 class="form-title">Create Account</h2>
                 <div class="form-message form-message-error"></div>
                 <div class="form-input-group">
-                    <input type="text" id="signupUsername" class="form-input" autofocus placeholder="Username">
-                    <div class="form-input-error-message"></div>
+                    <input type="text" id="signupUsername" class="form-input" autofocus placeholder="Username" required>
                 </div>
                 <div class="form-input-group">
-                    <input type="text" class="form-input" autofocus placeholder="Email Address">
-                    <div class="form-input-error-message"></div>
+                    <input type="email" id="email" class="form-input" autofocus placeholder="Email Address" required>
                 </div>
 
                 <div class="form-input-group">
-                    <input type="password" class="form-input" autofocus placeholder="Password">
-                    <div class="form-input-error-message"></div>
+                    <input type="password" id="password" class="form-input" autofocus placeholder="Password" required>
                 </div>
                 <div class="form-input-group">
-                        <input type="password" class="form-input" autofocus placeholder="Confirm Password">
-                        <div class="form-input-error-message"></div>
+                        <input type="password" id="cpassword" class="form-input" autofocus placeholder="Confirm Password" required>
                 </div>
                     <button class="normal" type="submit">Continue</button>
 
