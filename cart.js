@@ -201,20 +201,16 @@ function displayCart() {
     productContainer.innerHTML = "";
     Object.values(cartItems).map((item) => {
       productContainer.innerHTML += `
-    <div class='product'>
-    <i class="fa-solid fa-circle-xmark"></i>
-    <img src="./img/${item.tag}.jpg" alt="image" style="width: 80px;">
-    <span>${item.tag}</span>
-    </div>
-    <div class='price'>${item.price}</div>
-    <div class='quantity'>
-    <i class="fa-solid fa-circle-arrow-left"></i>
-    <span>${item.inCart}</span></div>
-    <i class="fa-solid fa-circle-arrow-right"></i>
-    </div>
-    <div class='total'>
+
+    <td><i class="fa-solid fa-circle-xmark"></i></td>
+    <td><img src="./img/${item.tag}.jpg" alt="image" style="width: 80px;"></td>
+    <td>${item.tag}</td>
+    <td class='price'>${item.price}</td>
+    <td>${item.inCart}</td></div>
+    </td>
+    <td class='total'>
     ₹${item.inCart * item.price}.00
-    </div>
+    </td>
     `;
     });
     productContainer.innerHTML += `
